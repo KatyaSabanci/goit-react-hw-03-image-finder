@@ -1,16 +1,13 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import React from 'react';
+import { getImages } from './API';
+import Button from './Button/Button';
+
+export class App extends Component {
+  state = {
+    target: '',
+    data: [],
+    totalPages: 0,
+    page: 1,
+    isLoading: false,
+  };
+}
